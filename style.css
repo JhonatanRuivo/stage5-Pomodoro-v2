@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+main {
+    max-width: 82.1rem;
+    min-height: 100vh;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timer {
+    text-align: center;
+    display: grid;
+    gap: 4.8rem;
+
+    width: 31.1rem;
+    height: 21.3rem;
+}
+.display {
+    display: flex;
+    height: 11.7rem;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 12.61rem;
+    line-height: 14.8rem;
+
+    color: #323238;
+}
+.controls {
+    display: flex;
+    justify-content: space-between;
+}
+.controls button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.controls button:hover {
+    transform: scale(1.1);
+    transition: 250ms;
+}
+
+.sounds {
+    width: 30.8rem;
+    height: 33.6rem;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 3.2rem;
+}
+.sounds button {
+    background: #e1e1e6;
+    border: none;
+    border-radius: 2.4rem;
+    cursor: pointer;
+}
+.sounds button:hover {
+    transform: scale(1.1);
+    transition: 250ms;
+}
+
+.sounds button.selected {
+background: linear-gradient(38deg, rgba(175,0,213,1) 0%, rgba(93,93,196,1) 50%, rgba(0,212,255,1) 100%);
+}
+.sounds button.selected svg path {
+    fill: white;
+}
+
+@media (max-width: 768px) {
+    main {
+        justify-content: space-around;
+    }
+    .timer {
+        width: 26.1rem;
+        height: auto;
+    }
+    .display {
+        font-size: 10.61rem;
+        line-height: 12.8rem;
+    }
+
+    .sounds {
+        width: 25.8rem;
+        height: 28.6rem;
+        gap: 1.6rem;
+    }
+}
+
+@media (max-width: 500px) {
+    main {
+        flex-direction: column;
+    }
+}
