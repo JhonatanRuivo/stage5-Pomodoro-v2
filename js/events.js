@@ -29,13 +29,12 @@ buttonDownMinutes.addEventListener('click', () => {
     controls.downMinutes()
 })
 buttonPlay.addEventListener('click', () => {
-  timer.countdown()
-  sounds.finishedAudioOff()
+  timer.countdown() 
 })
 buttonStop.addEventListener('click', () => {
+  sounds.finishedAudioOff()
   timer.updateDisplay()
   sounds.stopAudio()
-  
 })
 buttonForest.addEventListener('click', () => {
   sounds.setForestAudio()

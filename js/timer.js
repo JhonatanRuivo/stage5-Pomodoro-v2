@@ -17,18 +17,18 @@ function countdown() {
     let isFinished = minutes <= 0 && seconds <= 0
 
     if (seconds <= 0) {
-      seconds = 5
+      seconds = 60
       minutesDisplay.textContent = String(minutes - 1).padStart(2, '0')
+    }
+    
+    if (isFinished) {
+      sounds.finishedAudioOn()
+      sounds.stopAudio()
+      updateDisplay()
+      return
     }
 
     secondsDisplay.textContent = String(seconds - 1).padStart(2, '0')
-
-    if (isFinished) {
-      updateDisplay()
-      sounds.stopAudio()
-      sounds.finishedAudioOn()
-      return
-    }
     
     sounds.finishedAudioOff()
 
@@ -42,6 +42,6 @@ function updateDisplay() {
 
 return {
   countdown,
-  updateDisplay
+  updateDisplay,
 }
 }

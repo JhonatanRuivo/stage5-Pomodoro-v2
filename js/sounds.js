@@ -78,7 +78,6 @@ export default function Sound() {
     finishedAudio.play()
     finishedAudio.volume = 1
   }
-
   return {
     setForestAudio,
     setRainAudio,
